@@ -13,7 +13,20 @@
   scroll-behavior: smooth;
 }
 
-@keyframes marquee {
+.marquee-track {
+  display: flex;
+  animation: marquee-slide 6s linear infinite;
+  will-change: transform;
+}
+
+.marquee-content {
+  display: flex;
+  flex-shrink: 0;
+  white-space: nowrap;
+  min-width: 100vw;
+}
+
+@keyframes marquee-slide {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
@@ -21,14 +34,4 @@
 @keyframes progress {
   0% { width: 0%; }
   100% { width: 100%; }
-}
-
-.marquee-scroll {
-  animation: marquee 20s linear infinite;
-}
-
-@media (max-width: 768px) {
-  .marquee-scroll {
-    animation: marquee 8s linear infinite;
-  }
 }
