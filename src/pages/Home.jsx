@@ -35,7 +35,7 @@ const testimonials = [
   {
     quote: "Getting back on the field after an injury is stressful, but Connor made the whole process seamless. He was always accessible, guided me through the mental blocks, and made sure I never felt left in the dark about my progress.",
     name: "Dlyan Kropp",
-    detail: "Current: Real Salt Lake 2 · Former: UNC Chapel Hill",
+    detail: "Current: Real Monarchs · Former: UNC Chapel Hill",
     img: imgKropp,
   },
 ]
