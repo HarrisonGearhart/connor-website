@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet-async"
 import { Link } from 'react-router-dom'
 import Marquee from '../components/Marquee'
 import imgMakel from '../assets/makel.webp'
@@ -11,43 +10,48 @@ const testimonials = [
   {
     quote: "Connor took the time to really understand my movement deficiencies and supported me through my return to college soccer. That coaching and guidance still serves me as a professional soccer player.",
     name: "Makel Rasheed",
-    detail: "Current: Indy 11 USL · Former: Xavier University",
+    current: "Current: Indy 11 USL",
+    former: "Former: Xavier University",
     img: imgMakel,
   },
   {
     quote: "Recovering from an ACL tear, I reached a point where I was frustrated with my progress and desperate to get back on the field and feel like the soccer player I used to be. I started working with Connor and everything changed — he met me where I was, pushed me harder than I thought I could handle, and got me feeling like myself again. Connor is the perfect balance of patient when you need it and tough when you need it too. He is a wonderful person to have in your corner during what can be a very challenging time. Couldn't recommend him more highly.",
     name: "Jess Miller",
-    detail: "Former: Xavier University",
+    current: null,
+    former: "Former: Xavier University",
     img: imgJess,
   },
   {
     quote: "When I tore my ACL I felt lost. Very thankful for Connor and his attention to detail in my rehab process. We set short term and long term goals and I never felt lost. He helped me return to play and have a great season.",
     name: "Will Applegate",
-    detail: "Current: University of Tulsa",
+    current: "Current: University of Tulsa",
+    former: null,
     img: imgApplegate,
   },
   {
     quote: "Connor was the fundamental part in my recovery and made sure I was beyond prepared for my return. Thanks to him, I came back to full competitive play and have never looked back since.",
     name: "Fabrizio Bernal",
-    detail: "Current: Xavier University · Former: San Antonio FC",
+    current: "Current: Xavier University",
+    former: "Former: San Antonio FC",
     img: imgBernal,
   },
   {
     quote: "Getting back on the field after an injury is stressful, but Connor made the whole process seamless. He was always accessible, guided me through the mental blocks, and made sure I never felt left in the dark about my progress.",
     name: "Dlyan Kropp",
-    detail: "Current: Real Monarchs · Former: UNC Chapel Hill",
+    current: "Current: Real Monarchs",
+    former: "Former: UNC Chapel Hill",
     img: imgKropp,
   },
 ]
 
 export default function Home() {
   return (
-    <div className="pt-16"><Helmet><title>Tulsa Movement Coaching | Post-Injury Performance Coach Tulsa OK</title><meta name="description" content="Tulsa's only mobile post-injury performance coach. Helping high school and college athletes return to sport stronger. Book a free consultation today." /></Helmet>
+    <div className="pt-16">
 
       {/* Hero */}
       <section className="relative min-h-[80vh] md:min-h-[90vh] flex items-center overflow-hidden" style={{ background: 'linear-gradient(135deg, #1B3A6B 0%, #2554A0 50%, #1B3A6B 100%)' }}>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_#3B72C8_0%,_transparent_60%)] opacity-40" />
-        <div className="relative z-10 max-w-6xl mx-auto px-6 py-12 md:py-24">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 py-16 md:py-24">
           <p className="text-[#C85A1E] font-semibold text-sm tracking-widest uppercase mb-4">Tulsa Movement Coaching</p>
           <h1 className="text-white font-bold text-5xl md:text-7xl leading-tight max-w-3xl mb-6">
             One on One Post-Injury Performance Coaching
@@ -160,9 +164,10 @@ export default function Home() {
                   alt={t.name}
                   className="w-20 h-20 rounded-full object-cover object-top flex-shrink-0 border-2 border-[#C85A1E]"
                 />
-                <div>
+                <div className="flex flex-col">
                   <p className="text-[#1B3A6B] font-bold text-sm">{t.name}</p>
-                  <p className="text-gray-400 text-xs leading-snug mt-0.5">{t.detail}</p>
+                  {t.current && <p className="text-gray-400 text-xs">{t.current}</p>}
+                  {t.former && <p className="text-gray-400 text-xs">{t.former}</p>}
                 </div>
               </div>
               <p className="text-gray-700 text-sm leading-relaxed flex-grow">
