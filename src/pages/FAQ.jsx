@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async"
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Marquee from '../components/Marquee'
@@ -38,7 +39,7 @@ export default function FAQ() {
   const toggle = (i) => setOpenIndex(openIndex === i ? null : i)
 
   return (
-    <div className="pt-16">
+    <div className="pt-16"><Helmet><title>FAQ | Tulsa Movement Coaching</title><meta name="description" content="Frequently asked questions about post-injury performance coaching with Tulsa Movement Coaching." /></Helmet>
 
       {/* Header */}
       <section className="relative py-12 md:py-24 overflow-hidden" style={{ background: 'linear-gradient(135deg, #1B3A6B 0%, #2554A0 50%, #1B3A6B 100%)' }}>

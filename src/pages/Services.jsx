@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async"
 import { Link } from 'react-router-dom'
 import Marquee from '../components/Marquee'
 
@@ -69,7 +70,7 @@ const packages = [
 
 export default function Services() {
   return (
-    <div className="pt-16">
+    <div className="pt-16"><Helmet><title>Services & Pricing | Tulsa Movement Coaching</title><meta name="description" content="Post-injury performance coaching packages starting at $100/month. In-person and remote options available for Tulsa athletes." /></Helmet>
 
       {/* Header */}
       <section className="relative py-12 md:py-24 overflow-hidden" style={{ background: 'linear-gradient(135deg, #1B3A6B 0%, #2554A0 50%, #1B3A6B 100%)' }}>

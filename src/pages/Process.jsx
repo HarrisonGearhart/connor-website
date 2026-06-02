@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async"
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Marquee from '../components/Marquee'
@@ -32,7 +33,7 @@ export default function Process() {
   }, [])
 
   return (
-    <div className="pt-16">
+    <div className="pt-16"><Helmet><title>Our Process | Tulsa Movement Coaching</title><meta name="description" content="Learn how our 4-step process takes you from cleared to competition-ready. Plan, Foundational Strength, Functional Movement, Confident Return." /></Helmet>
 
       {/* Header */}
       <section className="relative bg-gradient-to-br from-[#1B3A6B] via-[#2554A0] to-[#1B3A6B] py-12 md:py-24 overflow-hidden">

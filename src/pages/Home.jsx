@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async"
 import { Link } from 'react-router-dom'
 import Marquee from '../components/Marquee'
 import imgMakel from '../assets/makel.webp'
@@ -41,7 +42,7 @@ const testimonials = [
 
 export default function Home() {
   return (
-    <div className="pt-16">
+    <div className="pt-16"><Helmet><title>Tulsa Movement Coaching | Post-Injury Performance Coach Tulsa OK</title><meta name="description" content="Tulsa's only mobile post-injury performance coach. Helping high school and college athletes return to sport stronger. Book a free consultation today." /></Helmet>
 
       {/* Hero */}
       <section className="relative min-h-[80vh] md:min-h-[90vh] flex items-center overflow-hidden" style={{ background: 'linear-gradient(135deg, #1B3A6B 0%, #2554A0 50%, #1B3A6B 100%)' }}>

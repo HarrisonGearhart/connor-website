@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async"
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
 import Marquee from '../components/Marquee'
@@ -33,7 +34,7 @@ export default function Contact() {
   }
 
   return (
-    <div className="pt-16">
+    <div className="pt-16"><Helmet><title>Contact | Tulsa Movement Coaching</title><meta name="description" content="Book a free 15-minute consultation with Connor Gearhart. Post-injury performance coaching in Tulsa, OK." /></Helmet>
 
       {/* Header */}
       <section className="relative py-12 md:py-24 overflow-hidden" style={{ background: 'linear-gradient(135deg, #1B3A6B 0%, #2554A0 50%, #1B3A6B 100%)' }}>
@@ -73,7 +74,7 @@ export default function Contact() {
               </div>
             </div>
             <div className="flex flex-col gap-2">
-              <label className="text-[#1B3A6B] font-semibold text-sm">Injury / Area of Focus</label>
+              <label className="text-[#1B3A6B] font-semibold text-sm">Area of Focus</label>
               <input type="text" name="injury" value={form.injury} onChange={handleChange} placeholder="ACL, ankle sprain, general performance, etc." className="border border-gray-300 rounded px-4 py-3 text-sm focus:outline-none focus:border-[#2554A0] transition-colors" />
             </div>
             <div className="flex flex-col gap-2">

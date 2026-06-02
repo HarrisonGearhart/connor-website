@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async"
 import connorImg from '../assets/connor.webp'
 import { Link } from 'react-router-dom'
 
@@ -37,7 +38,7 @@ const research = [
 
 export default function About() {
   return (
-    <div className="pt-16">
+    <div className="pt-16"><Helmet><title>About Connor Gearhart | Tulsa Movement Coaching</title><meta name="description" content="Connor Gearhart is a certified athletic trainer and movement specialist with 10+ years of Division I experience, serving Tulsa athletes." /></Helmet>
 
       {/* Bio — full gradient navy */}
       <section className="relative overflow-hidden py-12 md:py-24" style={{ background: 'linear-gradient(135deg, #1B3A6B 0%, #2554A0 50%, #1B3A6B 100%)' }}>
