@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://harrisongearhart.github.io/connor-website/sitemap.xml
+Sitemap: https://www.gearhartperformance.com/sitemap.xml

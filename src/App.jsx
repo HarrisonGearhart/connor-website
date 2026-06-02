@@ -11,7 +11,7 @@ import FAQ from './pages/FAQ'
 
 export default function App() {
   return (
-    <Router basename="/connor-website">
+    <Router basename="/">
       <ScrollToTop />
       <div className="flex flex-col min-h-screen bg-[#F5F5F0]">
         <Navbar />
